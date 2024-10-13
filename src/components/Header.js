@@ -4,8 +4,9 @@ import { NavLink } from 'react-router-dom';
 export default function Header () {
     return (
         <div>
-            <NavLink to="./login">Login</NavLink>
-            <NavLink to="./registration">Registration</NavLink>
+            <NavLink to="./login">login</NavLink>
+            <br></br>
+            <NavLink to="./registration">registration</NavLink>
         </div>
     )
 }

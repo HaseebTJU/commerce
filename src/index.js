@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import router from './app/app'; // Adjust the path if necessary
-import { RouterProvider } from 'react-router-dom';
+import App from './app/app'; // Adjust the path if necessary
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );
 

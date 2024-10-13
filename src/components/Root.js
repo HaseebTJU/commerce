@@ -4,10 +4,11 @@ import { Outlet } from "react-router-dom";
 
 export default function Root() {
     return (
-        <Header>
+        <div>
+            <Header />
             <main>
-                <Outlet/>
+                <Outlet />
             </main>
-        </Header>
-    )
+        </div>
+    );
 }
