@@ -1,16 +1,30 @@
 import React, {useState} from "react"; 
 import { submitLogin } from "../api/login";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
 
     const [username, setUsername] = useState(""); 
     const [password, setPassword] = useState(""); 
+    const navigate = useNavigate(); 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault(); 
-        submitLogin(username, password);
-        console.log("Username", username); 
-        console.log("Password", password);
+        
+        try {
+
+            const response = await submitLogin(username, password);
+            console.log(response);
+            
+            //code to redirect to main page;
+            navigate("/main"); 
+
+
+        } catch(error) {
+            console.error("Error submitting the form: ", error)
+        }
+        
+        
     }
 
     return (
